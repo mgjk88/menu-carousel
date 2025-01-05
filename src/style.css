@@ -1,0 +1,109 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.btn{
+    border: 0px;
+}
+
+header {
+  background-color: blue;
+  padding: 12px 16px;
+}
+
+#content { 
+    height: 100%;
+}
+
+#pic-frame{
+    height: 300px;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #555555;
+    position: relative;
+    display: grid;
+    grid-template-columns: 20px calc(100vw - 40px) 20px;
+    grid-template-rows: 280px 20px;
+    grid-template-areas: 
+    "btnl img btnr"
+    "btnl img btnr";
+}
+
+#nav-dots{
+    z-index: 1;
+    position: absolute;
+    bottom: 0px;
+    gap: 20px;
+}
+
+#nav-dots button{
+    border: 0px;
+}
+
+#img-wheel{
+    grid-area: img;
+    width: 300vw;
+    position: relative;
+}
+
+#left-btn,
+#right-btn{
+    height: 100%;
+    width: 20px;
+    z-index: 2;
+}
+
+#right-btn{
+    grid-area: btnr;
+    right: 0px;
+}
+
+#left-btn{
+    grid-area: btnl;
+    left: 0px;
+}
+
+#img1,
+#img2,
+#img3{
+    width: 100vw;
+}
+
+#img1{
+    background-color: red;
+}
+
+#img2{
+    background-color: orange;
+}
+
+#img3{
+    background-color: green;
+}
+
+#menu-btn {
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+}
+
+#menu-dropdown{
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+}
+
+#menu-dropdown.visible{
+    height: max-content;
+}
